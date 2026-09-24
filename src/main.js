@@ -65,7 +65,7 @@ document.body.appendChild(filterBox);
 
 // funcion principal: Cargar el dataset + dibuja neuronas/conexiones + los filtros
 async function init() {
-  const res = await fetch("/data/neurons.json");
+  const res = await fetch(`${import.meta.env.BASE_URL}data/neurons.json`);
   const data = await res.json();
 
   const neuronById = new Map();

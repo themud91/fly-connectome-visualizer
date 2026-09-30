@@ -43,7 +43,8 @@ const infoBox = document.createElement("div");
 //styles del infobox
 infoBox.style.cssText =
   "position:fixed;top:12px;left:12px;padding:8px 12px;background:rgba(0,0,0,0.75);" +
-  "color:#0ff;font-family:monospace;font-size:13px;border-radius:4px;display:none;pointer-events:none;";
+  "color:#0ff;font-family:'Orbitron',monospace;text-transform:uppercase;" +
+  "font-size:13px;border-radius:4px;display:none;pointer-events:none;";
 document.body.appendChild(infoBox);
 
 // le reaycast
@@ -60,8 +61,30 @@ const coloresPorTipo = {
 const filterBox = document.createElement("div");
 filterBox.style.cssText =
   "position:fixed;top:12px;right:12px;padding:8px 12px;background:rgba(0,0,0,0.75);" +
-  "color:#fff;font-family:monospace;font-size:13px;border-radius:4px;";
+  "color:#0ff;font-family:'Orbitron',monospace;text-transform:uppercase;" +
+  "font-size:13px;border-radius:4px;";
 document.body.appendChild(filterBox);
+
+// aboutBox : origine des donnees (projet FlyWire, open source)
+const aboutBox = document.createElement("div");
+aboutBox.style.cssText =
+  "position:fixed;bottom:12px;left:12px;max-width:340px;padding:8px 12px;" +
+  "background:rgba(0,0,0,0.75);color:#0ff;font-family:'Orbitron',monospace;" +
+  "text-transform:uppercase;font-size:9px;line-height:1.5;border-radius:4px;";
+aboutBox.innerHTML =
+  "<strong style='color:#0ff;'>À propos des données:</strong><br>" +
+  "Ce connectome (neurones + connexions) provient du projet FlyWire, " +
+  "porté par Janelia Research Campus (institut de recherche du HHMI), " +
+  "Google DeepMind et l'université de Princeton, qui ont cartographié " +
+  "l'intégralité du cerveau de la drosophile (mouche du vinaigre) et " +
+  "publié les données en open source.<br>" +
+  "<a href='https://flywire.ai' target='_blank' rel='noopener' style='color:#0ff;'>flywire.ai</a>" +
+  " · " +
+  "<a href='https://codex.flywire.ai' target='_blank' rel='noopener' style='color:#0ff;'>codex.flywire.ai</a>" +
+  "<br><br>" +
+  "Ce projet se concentre uniquement sur les neurones du lobe optique " +
+  "(types T4/T5).";
+document.body.appendChild(aboutBox);
 
 // funcion principal: Cargar el dataset + dibuja neuronas/conexiones + los filtros
 async function init() {

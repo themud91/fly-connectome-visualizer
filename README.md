@@ -42,8 +42,3 @@ npm run build
 ```
 
 Genera `dist/`, listo para desplegar como sitio estatico.
-
-## Detalle tecnico
-
-Ver [`CODIGO.md`](./CODIGO.md) para una explicacion completa del preprocesamiento de datos y del
-codigo de la escena 3D.
